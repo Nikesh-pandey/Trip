@@ -22,7 +22,7 @@ public class BusController {
     @PostMapping("/add")
     public ResponseEntity<AddBusResponse> addBusList(@RequestBody  AddBusRequest addBusRequest){
 
-        return new ResponseEntity<>(addBusService.BusRequest(addBusRequest), HttpStatus.OK);
+        return new ResponseEntity<>(addBusService.BusRequest(addBusRequest), HttpStatus.CREATED);
     }
     @GetMapping("/getList")
     public ResponseEntity<List<AddBusResponse>> getAllList(){

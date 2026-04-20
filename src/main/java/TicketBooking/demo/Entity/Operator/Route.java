@@ -1,5 +1,6 @@
 package TicketBooking.demo.Entity.Operator;
 
+import TicketBooking.demo.Enums.Route.Location;
 import jakarta.persistence.*;
 
 @Entity
@@ -8,22 +9,43 @@ public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String fromLocation;
-    private String toLocation;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "from_location") // ✅ avoid reserved word
+    private Location from;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "to_location")
+    private Location to;
 
-    public Route(){}
-
-    public Route(Long id, String fromLocation, String toLocation) {
-        this.id = id;
-        this.fromLocation = fromLocation;
-        this.toLocation = toLocation;
+    public Route() {
     }
 
-    public Long getId() { return id; }
-    public String getFromLocation() { return fromLocation; }
-    public String getToLocation() { return toLocation; }
+    public Route(Long id, Location from, Location to) {
+        this.id = id;
+        this.from = from;
+        this.to = to;
+    }
 
-    public void setId(Long id) { this.id = id; }
-    public void setFromLocation(String fromLocation) { this.fromLocation = fromLocation; }
-    public void setToLocation(String toLocation) { this.toLocation = toLocation; }
+    public Long getId() {
+        return id;
+    }
+
+    public Location getFrom() {
+        return from;
+    }
+
+    public Location getTo() {
+        return to;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setFrom(Location from) {
+        this.from = from;
+    }
+
+    public void setTo(Location to) {
+        this.to = to;
+    }
 }

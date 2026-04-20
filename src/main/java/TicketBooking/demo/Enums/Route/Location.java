@@ -1,0 +1,91 @@
+package TicketBooking.demo.Enums.Route;
+
+public enum Location {
+        ACHHAM,
+        ARGHाखANCHI,
+        BAGLUNG,
+        BAITADI,
+        BAJHANG,
+        BAJURA,
+        BANKE,
+        BARA,
+        BARDIYA,
+        BHAKTAPUR,
+        BHOJPUR,
+        CHITWAN,
+        DADHING,
+        DAILEKH,
+        DANG,
+        DARCHULA,
+        DHADING,
+        DHANUSHA,
+        DOLAKHA,
+        DOLPA,
+        DOTI,
+        GORKHA,
+        GULMI,
+        HUMLA,
+        ILAM,
+        JAJARKOT,
+        JHAPA,
+        JUMLA,
+        KAILALI,
+        KALIKOT,
+        KANCHANPUR,
+        KAPILVASTU,
+        KASKI,
+        KATHMANDU,
+        KAVREPALANCHOK,
+        KAVRE, // (short form often used, but official is Kavrepalanchok)
+        KHAJURA, // optional local mapping if needed in apps
+        KHOTANG,
+        LALITPUR,
+        LAMJUNG,
+        MAHOTTARI,
+        MAKAWANPUR,
+        MANANG,
+        MORANG,
+        MUGU,
+        MUSTANG,
+        MYAGDI,
+        NAWALPARASI_EAST,
+        NAWALPARASI_WEST,
+        NUWAKOT,
+        OKHALDHUNGA,
+        PALPA,
+        PANCHTHAR,
+        PARBAT,
+        PARSA,
+        PYUTHAN,
+        RAMECHHAP,
+        RASUWA,
+        RAUTAHAT,
+        ROLPA,
+        RUKUM_EAST,
+        RUKUM_WEST,
+        RUPANDEHI,
+        SALYAN,
+        SANKHUWASABHA,
+        SAPTARI,
+        SARLAHI,
+        SINDHULI,
+        SINDHUPALCHOK,
+        SINDHUPALCHOWK, // alternate spelling
+        SIRAHA,
+        SOLUKHUMBU,
+        SUNSARI,
+        SURKHET,
+        SURLAHAHI, // typo-safe placeholder (you may remove)
+        TANAHU,
+        TAPLEJUNG,
+        TERHATHUM,
+        UDAYAPUR
+
+
+
+
+
+
+
+
+}

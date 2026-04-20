@@ -26,6 +26,10 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/register","/auth/login").permitAll()
                         .requestMatchers("/bus/**").hasRole("OPERATOR")
+                        .requestMatchers("/route/**").hasRole("OPERATOR")
+                        .requestMatchers("/trip/**").hasRole("OPERATOR")
+
+
 
                         .anyRequest().authenticated()
                 )
