@@ -1,17 +1,17 @@
-package TicketBooking.demo.Dtos.RouteDtos;
+package TicketBooking.demo.Dtos.PassengerDtos;
 
 import TicketBooking.demo.Enums.Route.Location;
 
-public class RouteRequestDto {
+public class TripSearchRequest {
 
 
     private Location from;
     private Location to;
 
-    public RouteRequestDto() {
+    public TripSearchRequest() {
     }
 
-    public RouteRequestDto(Location from, Location to) {
+    public TripSearchRequest(Location from, Location to) {
         this.from = from;
         this.to = to;
     }

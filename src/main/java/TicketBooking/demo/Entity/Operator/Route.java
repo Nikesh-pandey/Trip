@@ -4,7 +4,8 @@ import TicketBooking.demo.Enums.Route.Location;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "route")
+@Table(name = "route", uniqueConstraints = @UniqueConstraint(
+        columnNames = {"from_location", "to_location"}))
 public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

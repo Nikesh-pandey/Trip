@@ -24,13 +24,12 @@ public class SecurityConfiguration {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/searchtrip/**").permitAll()
+                        .requestMatchers("/availableSeat/**").permitAll()
                         .requestMatchers("/auth/register","/auth/login").permitAll()
                         .requestMatchers("/bus/**").hasRole("OPERATOR")
                         .requestMatchers("/route/**").hasRole("OPERATOR")
                         .requestMatchers("/trip/**").hasRole("OPERATOR")
-
-
-
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

@@ -19,10 +19,12 @@ public class RouteController {
     public RouteController(AddRouteService addRouteService) {
         this.addRouteService = addRouteService;
     }
+
     @PostMapping("/routeReq")
     public ResponseEntity<?> addRoutes(@RequestBody RouteRequestDto routeRequestDto){
         return new ResponseEntity<>(addRouteService.addRoute(routeRequestDto), HttpStatus.CREATED);
     }
+
     @GetMapping("/getRouteList")
     public ResponseEntity<List<RouteResponseDTO>> getRouteList(){
         return new ResponseEntity<>(addRouteService.getallRouteList(),HttpStatus.OK);
